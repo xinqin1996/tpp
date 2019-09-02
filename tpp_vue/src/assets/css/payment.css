@@ -1,0 +1,236 @@
+#payment div, #payment span, #payment a {
+  margin: 0px;
+  padding: 0px; }
+
+#payment .action {
+  font-size: 14px;
+  color: #999;
+  line-height: 14px; }
+
+#payment .amount {
+  font-size: 20px;
+  color: #ff2e62;
+  line-height: 24px;
+  font-weight: 500;
+  margin-left: 4px; }
+
+#payment .yuan {
+  font-size: 12px;
+  color: #ff2e62;
+  line-height: 14px; }
+
+#payment .pay-bar {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-image: linear-gradient(45deg, #fff, #fff); }
+
+#payment .pay-tip {
+  display: flex;
+  position: relative;
+  text-align: center;
+  color: #c8c8c8;
+  font-size: 15px; }
+
+#payment .lefts {
+  position: relative;
+  padding: 17.875px 15px 18px 17px; }
+
+#payment .rights {
+  position: absolute;
+  right: 0px;
+  padding: 14.875px 25px 21px 11px; }
+
+#payment .pay-btn {
+  position: relative;
+  background-image: linear-gradient(45deg, #ff47a8, #ff2e62);
+  height: 56px;
+  text-align: center;
+  line-height: 56px; }
+
+#payment .d6 {
+  height: 310px;
+  padding: 8px 16px; }
+
+#payment .dy-list-brief {
+  white-space: pre-wrap;
+  color: #999;
+  line-height: 1.5rem;
+  font-size: .8125rem;
+  margin-top: .6vw; }
+
+#payment .d2 {
+  padding: 33px 25px 20px;
+  background-image: linear-gradient(-48deg, #7889aa, #96a3bc);
+  color: #fff; }
+
+#payment .i-title {
+  margin-bottom: 10px;
+  align-items: center;
+  font-size: 22px; }
+
+#payment .count {
+  margin: 2px 0 0 4px;
+  font-size: 13px; }
+
+#payment .brief {
+  margin-bottom: 5.5px;
+  font-size: 13px; }
+
+#payment .tpp-remark {
+  position: absolute;
+  width: 52px;
+  height: 12px;
+  top: 3.7vw;
+  right: 2.7vw;
+  background-image: url();
+  background-size: 100% 100%;
+  background-repeat: no-repeat; }
+
+#payment .dy-list-item {
+  height: 37.5px;
+  padding: 8px 16px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-size: 15px;
+  color: #50505a; }
+
+#payment .dy-list-extra {
+  position: absolute;
+  right: 15px;
+  color: #999; }
+
+#payment .dy-whitespace {
+  height: 8px;
+  background-color: #f5f5f5; }
+
+#payment .dy-list-thumbs {
+  margin-right: 10px;
+  position: absolute;
+  right: 15px; }
+
+#payment .dy-list-thumbs img {
+  width: 29px;
+  height: 29px; }
+
+#payment .dy-list-items {
+  display: flex;
+  padding: 8px 16px; }
+
+#payment .div-list-poster {
+  width: 80px;
+  height: 80px;
+  background-image: url();
+  background-size: cover;
+  opacity: 1;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  margin-right: 10px; }
+
+#payment .dy-list-tag {
+  display: inline-block;
+  vertical-align: text-bottom;
+  margin-bottom: 1px;
+  padding: 0 4px;
+  font-size: 11px;
+  color: #ff9c1c;
+  height: 16px;
+  position: relative; }
+
+#payment .dy-list-tag:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ff9c1c;
+  border-radius: 4px; }
+
+#payment .dy-list-brief {
+  display: inline;
+  padding-bottom: 2.5vw;
+  color: #999;
+  line-height: 1.5rem;
+  font-size: .8125rem; }
+
+#payment .dy-list-content-lines {
+  display: flex;
+  padding-top: 10px; }
+
+#payment .price {
+  font-size: 14px;
+  padding-right: .6vw;
+  color: #ff2e62; }
+
+#payment .stdPrice {
+  text-decoration: line-through;
+  color: #999;
+  padding-right: .6vw;
+  font-size: .75rem; }
+
+#payment .dy-list-value {
+  display: flex;
+  position: absolute;
+  right: 30px;
+  height: 24px;
+  padding: 0; }
+
+#payment .number-spinner-action {
+  position: relative;
+  flex: 0 0 auto;
+  width: 24px; }
+
+#payment .number-spinner-action a {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  text-decoration: none; }
+
+#payment .number-decrease {
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
+  background-image: url();
+  background-position: 50%;
+  background-size: cover; }
+
+#payment .number-picker-wrapper {
+  width: 24px;
+  font-size: 1rem;
+  color: #50505a;
+  text-align: center; }
+
+#payment .number-increase {
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
+  background-image: url();
+  background-position: 50%;
+  background-size: cover; }
+
+#payment .div-list-posters {
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  opacity: 1;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  background-image: url(); }
+
+#payment .number-picker-wrapper, #payment .number-spinner-action {
+  line-height: 22px; }
+
+#payment .number-increase img, #payment .number-decrease img {
+  width: 100%;
+  height: 100%; }
+
+#payment .pay-bar .pay_cover {
+  width: 75vw; }
+  #payment .pay-bar .pay_cover img {
+    width: 100%; }
+  #payment .pay-bar .pay_cover h3 {
+    font-size: 6.4vw; }

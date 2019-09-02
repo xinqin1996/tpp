@@ -1,0 +1,247 @@
+#payment{
+  div,span,a{
+      margin:0px;
+      padding:0px;
+  }
+  .action{
+      font-size: 14px;
+      color: #999;
+      line-height: 14px;
+  }
+  .amount{
+      font-size: 20px;
+      color: #ff2e62;
+      line-height: 24px;
+      font-weight: 500;
+      margin-left: 4px;
+  }
+  .yuan{
+      font-size: 12px;
+      color: #ff2e62;
+      line-height: 14px;
+  }
+  .pay-bar{
+      position: fixed;
+      bottom: 0px;
+      width: 100%;
+      background-image: linear-gradient(45deg,#fff,#fff);
+  }
+  .pay-tip{
+      display: flex;
+      position: relative;
+      text-align: center;
+      color: #c8c8c8;
+      font-size: 15px;
+  }
+  .lefts{
+      position: relative;
+      padding: 17.875px 15px 18px 17px;
+  }
+  .rights{
+      position: absolute;
+      right: 0px;
+      padding: 14.875px 25px 21px 11px;
+  }
+  .pay-btn{
+      position: relative;
+      background-image: linear-gradient(45deg,#ff47a8,#ff2e62);
+      height: 56px;
+      text-align: center;
+      line-height: 56px;
+  }
+  .d6{
+      height: 310px;
+      padding:8px 16px;
+  }
+  .dy-list-brief{
+      white-space: pre-wrap;
+      color: #999;
+      line-height: 1.5rem;
+      font-size: .8125rem;
+      margin-top: .6vw;
+  }
+  .d2{
+      padding:33px 25px 20px;
+      background-image: linear-gradient(-48deg,#7889aa,#96a3bc);
+      color:#fff;
+  }
+  .i-title{
+      margin-bottom:10px;
+      align-items: center;
+      font-size:22px;
+  }
+  .count{
+      margin: 2px 0 0 4px;
+      font-size: 13px
+  }
+  .brief{
+      margin-bottom:5.5px;
+      font-size:13px;
+  }
+  .tpp-remark{
+      position: absolute;
+      width: 52px;
+      height: 12px;
+      top: 3.7vw;
+      right: 2.7vw;
+      background-image: url();
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+  }
+  .dy-list-item{
+      height:37.5px;
+      padding:8px 16px;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      font-size: 15px;
+      color: #50505a;
+  }
+  .dy-list-extra{
+      position: absolute;
+      right: 15px;
+      color: #999;
+  }
+  .dy-whitespace{
+      height: 8px;
+      background-color: #f5f5f5;
+  }
+  .dy-list-thumbs{
+      margin-right: 10px;
+      position: absolute;
+      right: 15px;
+  }
+  .dy-list-thumbs img{
+    //   padding-left: 13px;
+      width: 29px;
+      height: 29px;
+  }
+  .dy-list-items{
+      display: flex;
+      padding: 8px 16px;
+  }
+  .div-list-poster{
+      width: 80px;
+      height: 80px;
+      background-image: url();
+      background-size: cover;
+      opacity: 1;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      margin-right: 10px;
+  }
+  .dy-list-tag{
+      display: inline-block;
+      vertical-align: text-bottom;
+      margin-bottom: 1px;
+      padding: 0 4px;
+      font-size: 11px;
+      color: #ff9c1c;
+      height: 16px;
+      position: relative;
+  }
+  .dy-list-tag:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      border: 1px solid #ff9c1c;
+      border-radius: 4px;
+  }
+  .dy-list-brief{
+      display: inline;
+      padding-bottom: 2.5vw;
+      color: #999;
+      line-height: 1.5rem;
+      font-size: .8125rem;
+  }
+  .dy-list-content-lines{
+      display: flex;
+      padding-top: 10px ;
+  }
+  .price{
+      font-size: 14px;
+      padding-right: .6vw;
+      color: #ff2e62;
+  }
+  .stdPrice{
+      text-decoration: line-through;
+      color: #999;
+      padding-right: .6vw;
+      font-size: .75rem;
+  }
+  .dy-list-value{
+      display: flex;
+      position: absolute;
+      right: 30px;
+      height: 24px;
+      padding: 0;
+  }
+  .number-spinner-action{
+      position: relative;
+      flex: 0 0 auto;
+      width: 24px;
+  }
+  .number-spinner-action a{
+      position: absolute;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+  }
+  .number-decrease{
+      width: 24px;
+      height: 24px;
+      margin: 0 auto;
+      background-image: url();
+      background-position: 50%;
+      background-size: cover;
+  }
+  .number-picker-wrapper{
+      width: 24px;
+      font-size: 1rem;
+      color: #50505a;
+      text-align: center;
+  }
+  .number-increase{
+      width: 24px;
+      height: 24px;
+      margin: 0 auto;
+      background-image: url();
+      background-position: 50%;
+      background-size: cover;
+  }
+  .div-list-posters{
+      width: 80px;
+      height: 80px;
+      background-size: cover;
+      opacity: 1;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      margin-right: 10px;
+      background-image: url();
+  }
+}
+
+#payment {
+    .number-picker-wrapper,.number-spinner-action{
+        line-height: 22px;
+    }
+    .number-increase,.number-decrease{
+        img{width:100%;height:100%;}
+    }
+    .pay-bar{
+        .pay_cover{
+            width:75vw;
+            // height:50vw;
+            img{
+                width:100%;
+            }
+            h3{
+                font-size:6.4vw;
+            }
+        }
+    }
+}

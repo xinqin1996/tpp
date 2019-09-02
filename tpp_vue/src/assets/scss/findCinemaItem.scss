@@ -1,0 +1,106 @@
+// <div class="cinema_item">
+// <div class="cname">{{cinema.cname}}</div>
+// <div class="caddress">{{cinema.caddress}}</div>
+// <div class="tag">
+//   <div class="tag_icon" v-for="(elem,i) of strSplit(cinema.tag)" :key="i">{{elem}}</div>
+// </div>
+// <div class="prefe"></div>
+// <div class="time">
+//   <div v-for="(elem,j) of time" :key="j">
+//     <h3>{{elem.time_start}}</h3>
+//     <h3>{{elem.d23}}</h3>
+//     <h3>{{elem.price}}</h3>
+//   </div>
+// </div>
+// <div class="lowest">{{cinema.lowest}}</div>
+// </div>
+
+#find_cinema_item{
+  .cinema_item{
+    padding:4vw;
+    position:relative;
+    .cname{
+      font-size:1.7rem;
+      line-height:2.08rem;
+      margin-bottom:0.8vw;
+    }
+    .caddress{
+      font-size:1.3rem;
+      line-height: 1.31rem;
+      color:#666;
+      // margin-bottom:1vw;     
+    }
+    .tag{
+      margin:1.2vw 0;
+      .tag_icon{
+        float:left;
+        font-size:1.2rem;
+        line-height:14px;
+        color:#1394f3;
+        padding:0 3px;
+        border:1px solid rgba(19,148,243,.4);
+        margin-right:1.33vw;
+      }
+    }
+    .prefe{
+      display:flex;
+      margin:9px 0 10px;
+       .hui{
+         text-align:center;
+         width:15px;
+         background-color:#ff9c1c;
+         color:#fff;
+         line-height: 15px;
+         margin-right:5px;
+        }
+       .content{
+         color:#999999;
+         line-height:15px;
+       }
+    }
+    .time{
+      height:18.6vw;
+      width:100%;
+      overflow-y: hidden;
+      overflow-x: auto;
+      ul{
+        height:100%;
+        // min-width:1200px;
+        .time_block{
+          background-color:#f0f0f0;
+          border-radius:3px;
+          width:19.2vw;
+          margin-right:1.3vw;
+          height:100%;
+          float:left;
+          display:flex;
+          flex-direction: column;
+          justify-content: center;
+          .h_1{
+            font-weight:600;
+            font-size:1.5rem;
+            line-height:15px;
+            color:#50505a;
+          }
+          .h_2{
+            font-size:1.2rem;
+            line-height:18px;
+            color:#999999;
+          }
+          .h_3{
+            font-size:1.2rem;
+            line-height:12px;
+            color:#ff2e62;
+          }
+        }
+      }
+    }
+    .lowest{
+      position:absolute;
+      font-size:1.5rem;
+      line-height: 25px;
+      top:1.5rem;right:1.5rem;
+      color:#ff2e62;
+    }
+  }
+}

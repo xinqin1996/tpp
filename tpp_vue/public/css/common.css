@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/*sonystyle 公共样式 common css*/
+/*  */
+/* 背景色f1f4f9 */
+.bg-Grey {
+  background-color: #f1f4f9; }
+
+.bg-white {
+  background-color: #fff; }
+
+.bg-red {
+  background-color: #dc2828 !important; }
+
+.bg-blue {
+  background-color: #0a83d7; }
+
+.bg-orange {
+  background-color: #ff6131; }
+
+.bg-f5 {
+  background-color: #f5f5f5; }
+
+.font-33 {
+  color: #333; }
+
+.font-66 {
+  color: #666; }
+
+.font-cc {
+  color: #ccc; }
+
+.font-ff {
+  color: #fff; }
+
+.width_1210 {
+  width: 1210px;
+  margin: 0 auto; }
+
+.width_1200 {
+  width: 1200px;
+  margin: 0 auto; }
+
+/* cf 高度坍塌*/
+.cf:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.add-tb::before{
+  display: table;
+  content:"";
+}
+
+/* .cf {
+  *zoom: 1; } */
+
+/*左右浮动*/
+.float-l {
+  float: left; }
+
+.float-r {
+  float: right; }
+
+.d-flex {
+  display: flex; }
+
+/*外边距*/
+.mx-5 {
+  margin-left: 5px;
+  margin-right: 5px; }
+
+.mx-2 {
+  margin-left: 2px;
+  margin-right: 2px; }
+
+.mb-10 {
+  margin-bottom: 10px; }
+
+.ml-20 {
+  margin-left: 20px; }
+
+.pt-2 {
+  padding-top: 2px; }
+
+.py-10 {
+  padding: 10px 0; }
+
+/*溢出隐藏*/
+.MBlock {
+  overflow: hidden; }
+
+/* .d-none {
+  display: none !important; } */

@@ -1,0 +1,167 @@
+
+#movie_detail{
+  .detail_video{
+    // height:35%;
+    width:100%;
+    position: relative;
+    resize:both;
+    background-color:#000;
+    video{
+      width:100%;height:100%;object-fit:contain;
+    }
+    .video_bottom{
+      position:absolute;
+      z-index: 99;
+      height:15px;width:100%;
+      border-top-left-radius:10px;
+      border-top-right-radius:10px;
+      bottom:-1px;
+      background-color:#fff;
+    }
+  } 
+  .detail_middle{
+    padding:8px 20px 5px;
+    .middle_one{
+      padding-bottom:5px;
+      .one_left{
+        float:left;position: relative;
+        width:26%;
+        img{width:100%;}
+        .icon{
+          position: absolute;
+          padding:0 3px;border-radius: 3px;
+          top:3px;left:5px;
+          background-color:#fff;
+          color:#000;
+          font-weight: 600;
+        }
+      }
+      .one_right{
+        float:left;
+        padding-left:13px;
+        .right_1{
+          font-size:22px;font-weight:700;margin:3px 0 4px;line-height:25px;
+        }
+        .right_2{
+          font-size:12px;line-height:18px;
+          color:#999999;
+        }
+        .right_3{
+          padding-top:10px;
+        }
+        .right_3,.right_4{
+          font-size:12px;padding-bottom:8px;line-height:13px;
+          color:#777777;
+        }
+        .right_5{
+          font-size:12px;padding-bottom:8px;line-height:14.5px;
+          font-weight:600;         
+        }
+        .right_5.orange{
+          color:#ff9c1c; 
+        }
+      }
+    }
+    .middle_two.d-none{
+      display: none;
+    }
+    .middle_two{
+      // background-color:#ccc;
+      // margin-top:5px;
+      display:flex;justify-content: space-between;
+      .two_left{
+        width: 45%;
+      }
+      .two_right{
+        height:100%;
+      }
+      .two_left{
+        display:flex;
+        flex-wrap: wrap;align-items:center;
+        >div:first-child{
+          font-weight: 500;
+          margin-right: 4px;
+          font-size: 3.5rem;
+          line-height: 10.13333333vw;
+        }
+        .start{
+          width:80px;
+          height:3.6vw;
+          background:url(../../../public/img/start.svg) repeat;
+          background-size: 16px 100%;
+          position: relative;
+          .start_inner{
+            width:40px;
+            height:3.6vw;
+            background:url(../../../public/img/start_inner.svg) repeat;
+            background-size: 16px 100%;
+            position:absolute;
+            top:0px;left:0px;
+          }
+        }
+        >div:nth-child(3){
+          font-weight: 700;
+          font-size: 1.3rem;
+        }
+        >div:nth-child(4){
+          margin-left: .53333333vw;
+          font-size: 1.2rem;
+        }
+        >div:nth-child(5){
+          height: 0;width:0;
+          border:5px solid #fff;
+          border-left-color:#777777;
+          margin-left: .53333333vw;
+        }
+      }
+    }
+  }  
+  .detail_blank{
+    background-color:#f5f5f5;
+    height:2.4vw;
+  }
+  .detail_bottom{
+    .mint-navbar .mint-tab-item.is-selected{
+      font-weight: 600;
+      color:#000;
+    }
+    .mint-tab-item-label{
+      font-size:1.6rem;
+    }
+    .mint-navbar .mint-tab-item.is-selected{
+      border-bottom:2px solid #000000;
+    }
+    .intro.height{
+       height: 7.5rem;
+    }
+    .intro{
+      font-size:1.5rem;
+      margin:4vw;
+      color:#000;
+      background-color:#fff;
+      line-height: 2.5rem;
+      overflow: hidden;
+      position:relative;
+      .show{
+        position:absolute;z-index:30;
+        right:0px;bottom:0px;
+        font-size:1.5rem;text-align: right;
+        color:#1394f3;;
+        // background: linear-gradient(90deg,hsla(0,0%,100%,0),#fff,#fff,#fff);
+        background:linear-gradient(90deg,rgba(255,255,255,0.3) 0%,#fff 40%,#fff 100%);
+        line-height: 2.5rem;
+        width:14vw;
+        // filter:blur(1px);
+      }
+    }
+  }
+  .detail_seat{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    background-color:#ff326f;
+    line-height: 14.5vw;
+    color:#fff;
+    font-size:1.8rem;
+  }
+}

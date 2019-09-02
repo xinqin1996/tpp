@@ -1,0 +1,66 @@
+#header_search {
+  width: 100%;
+  height: 100%; }
+  #header_search .magnifier {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    #header_search .magnifier img {
+      width: 4.3vw;
+      height: 4.3vw;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+  #header_search .search_input {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    top: 0px;
+    left: 0px;
+    z-index: 20; }
+    #header_search .search_input .van-search__action {
+      color: #1394f3; }
+    #header_search .search_input .input_top {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 10; }
+    #header_search .search_input .input_content {
+      overflow: scroll;
+      padding-top: 54px;
+      height: 100%; }
+      #header_search .search_input .input_content .red {
+        color: #ff2e62; }
+      #header_search .search_input .input_content .input_block {
+        padding: 4vw 4vw 3.2vw;
+        position: relative; }
+        #header_search .search_input .input_content .input_block .cname {
+          font-size: 1.7rem;
+          line-height: 25px; }
+        #header_search .search_input .input_content .input_block .caddress {
+          margin: 0.5vw 0 0;
+          font-size: 1.3rem;
+          line-height: 19px;
+          color: #666; }
+        #header_search .search_input .input_content .input_block .tag {
+          font-size: 1.2rem;
+          height: 24px;
+          display: flex;
+          align-items: center; }
+          #header_search .search_input .input_content .input_block .tag .tag_icon {
+            border: 1px solid rgba(19, 148, 243, 0.4);
+            color: #1394f3;
+            line-height: 13px;
+            padding: 0 0.3rem;
+            margin-right: 0.3rem; }
+        #header_search .search_input .input_content .input_block .lowest {
+          font-size: 1.5rem;
+          line-height: 25px;
+          position: absolute;
+          top: 4vw;
+          right: 4vw;
+          color: #ff2e62; }

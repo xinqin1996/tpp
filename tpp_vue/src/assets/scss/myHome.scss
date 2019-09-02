@@ -1,0 +1,146 @@
+#my_home{
+  position:relative;
+  background-color:#efefef;
+  .bg{
+    position:absolute;
+    width:300vw;
+    height:300vw;
+    border-radius:50%;
+    background-color:#f0f;
+    top:-250vw;
+    left:-100vw;
+  }
+  .header{
+    position:relative;
+    // z-index:2;
+    display:flex;
+    align-items: center;
+    padding:8vw 4vw 6vw;
+    .header_img{
+      width:20vw;
+      height:20vw;
+      border-radius:50%;
+      border:3px solid #fff;
+      overflow: hidden;
+      img{width:100%;}
+    }
+    .header_name{
+      padding-left:3vw;
+      font-size:2.2rem;
+      color:#fff;
+    }
+    .icon1,.icon2{
+      position:absolute;
+      top:15vw;
+      right:18vw;
+      z-index:10;
+      width:6vw;
+      height:6vw;
+      // background-color:red;
+      img{
+        width:100%;
+        height:100%;
+      }
+    }
+    .icon2{
+      right:6vw;
+    }
+  }
+  .main{
+    position:relative;
+    // height:800px;
+    padding:0 4vw 75px;
+    .main_content{
+      height:100%;
+      .br{
+        // padding:2vw;
+        // border:1px solid red;
+        background-color:#fff;
+        border-radius: 3.5vw;
+        overflow: hidden;
+      }
+      .block_title{
+        margin:0 auto;
+        width:90%;
+        font-size:1.6rem;
+        font-weight:600;
+        padding:2.5vw 0;
+        border-bottom:1px solid #bdc5c8;
+      }      
+      .block1{
+        .van-grid-item__text{
+          color:#000;
+        }
+      }
+      .block2{
+        margin-top:2.6vw;
+        .van-grid-item__text{
+          color:#000;
+        }
+        .van-grid{
+          padding-bottom:5vw;
+          position: relative;
+        }
+        .span_font{
+          position: absolute;
+          bottom:4vw;
+          width:33.3%;
+          left:0;
+          text-align:center;
+          z-index:5;
+          color:#9d9d9d;
+        }
+        .span_font2{
+          left:33.3%;
+        }
+      }
+      .block3{
+        margin-top:2.6vw;
+        .content{
+          display: flex;
+          padding:4vw;
+          .ct{
+            flex:1;
+            display:flex;
+            >div:first-child{
+              width:30%;
+              // height:15vw;
+              background-color:#eeccee;
+              text-align: center;
+            }
+            img{
+              width:50%;
+              padding:5vw 0;
+            }
+            >div:last-child{
+              padding:1vw 0 0 2vw;
+              div:first-child{
+                font-size:14px;
+                font-weight:600;
+              }
+              div:not(:first-child){
+                color:#9d9d9d;
+              }
+            }
+          }
+        }
+      }
+      .block4{
+        margin-top:2.6vw;
+        .van-grid-item__content{
+          padding:2.13vw;
+        }
+        .block_title{
+          // margin-bottom:4vw;
+        }
+        .van-grid{
+          padding-top:2.13vw;
+          padding-bottom:2.13vw;
+        }
+        .van-grid-item__text{
+          color:#000;
+        }
+      }
+    }
+  }
+}

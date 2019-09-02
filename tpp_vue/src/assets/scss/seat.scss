@@ -1,0 +1,234 @@
+#seat{
+  div,a,p,span,div,img,ul,li{
+      margin: 0;
+      padding: 0;
+  }
+  #root{
+      height:100%;
+  }
+  .content{
+      position: relative;
+      height: 100%;
+  }
+  .dy-list-item{
+      display:flex;
+      margin-left:15px;
+      padding:15px 0;
+      background-size:100% 1px;
+  }
+  .cinema-info{
+      flex:1;
+      padding:0 4px 0 0;
+      position:relative;
+  }
+  .cinema-info .dy-list-title{
+      font-size: 16px;
+      color: #333;
+  }
+  .cinema-info .dy-list-brief{
+      margin-top: 8px;
+      font-size: 13px;
+      color: #666;
+  }
+  .seat-legend{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      width: 100%;
+      height: 34px;
+      position: relative;
+      background-size: 100% 1px;
+      background-color: #fff;
+  }
+  .seat-legend li, .seat-legend ul{
+      display: flex;
+      align-items: center;
+      padding: 15px 0;
+  }
+  .seat-legend li{
+      flex: 0 0 auto;
+      margin-right: 16px;
+  }
+  .seat-legend .i-normal{
+      background-position:0 0;
+  }
+  .seat-legend i{
+      background-image: url();
+      background-size: 64px;
+  }
+  .seat-legend i, .seat-legend img{
+      display: block;
+      margin-right: 5px;
+      width: 20px;
+      height: 20px;
+  }
+  .seat-legend .i-sold{
+      background-position: 0 -40px;
+  }
+  .seat-legend .i-best-area{
+      background-size: contain;
+      background-image: url();
+  }
+  .hall-name{
+      font-size: 13px;
+      background-color: rgb(245,245,245);
+      display: flex;
+      justify-content: center;
+  }
+  .hall-name p {
+      min-width: 150px;
+      padding: 0 15px;
+      height: 22px;
+      line-height: 22px;
+      text-align: center;
+      font-weight: 400;
+      white-space: nowrap;
+      background-position: 50%;
+      background-size: cover;
+  }
+  .i-screen{
+      background-image:url()
+  }
+  .jus{
+      height: 55px;
+      width: 100%;
+      background-image: linear-gradient(45deg,#ff47a8,#ff2e62);
+      opacity: .5;
+      text-align: center;
+      line-height: 55px;
+      position: fixed;
+      bottom:0px;
+  }
+  .jus.show{
+    opacity: 1;
+  }
+  .tpp-btn{
+      color: rgba(255,255,255,1);
+      font-size: 16px;
+  }
+}
+#seat {
+  // background-color:#f5f5f5;
+  // height:100%;
+  .list_bg{
+  background-color:#f5f5f5;  
+  }
+  .seat_list{
+    padding-top:3vw;
+    width:93.24vw;
+    margin:0 auto;
+
+    .row{
+      display: flex;
+      .col{
+        width:6.66vw;
+        height:7vw;
+        // border:1px solid red;
+        span{
+          margin:0 auto;
+          display:block;
+          width:80%;
+          height:70%;
+          background-color:#fff;
+          border:1px solid #d8d9df;
+          // background-color:#ff2e62;
+          border-top-left-radius:8px;
+          border-top-right-radius:8px;
+          border-bottom-left-radius:2px;
+          border-bottom-right-radius:2px;
+        }
+        span.is_show{
+          background-color:#f44235
+        }
+        span.green{
+          background-color:#70c972;
+        }
+      }
+    }
+  }
+  .choose_main{
+    position: fixed;
+    bottom:55px;
+    padding:4vw;
+    padding-right:0;
+    background:#fff;
+    width:100%;
+    overflow-x:auto;
+    overflow-y:hidden;
+    ul{
+      display: flex;     
+      // 内容不换行
+      white-space: nowrap;      
+    }
+    .choose_item{
+      // 宽度扩展
+      position: relative;
+      min-width:22.4vw;
+      padding:0 3.2vw;
+      height:10vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border:1px solid #ccc;
+      margin-right:1.6vw;
+      h3{}
+      h4{color:#ff2e62;}
+    }
+    .choose_item::before{
+      content:'';
+      position:absolute;
+      width:2vw;
+      height:4vw;
+      left:-1px;
+      top:50%;
+      margin-top:-2vw;
+      background-color:#fff;
+      border:1px solid #ccc;
+      border-left:none;
+      border-top-right-radius: 2vw;
+      border-bottom-right-radius: 2vw;
+    }
+    .choose_item::after{
+      content:'×';
+      font-size:1.6rem;
+      opacity: 0.3;
+      line-height: 4vw;
+      text-align: center;
+      position:absolute;
+      width:4vw;
+      height:4vw;
+      // width:4vw;
+      // height:2px;
+      // transform:rotate(45deg);
+      // background-color:#000;
+      right:0;
+      top:50%;
+      margin-top:-2vw;
+      background-color:#fff;
+      border-left:none;
+      border-top-right-radius: 2vw;
+      border-bottom-right-radius: 2vw;
+    }
+  }
+  .seat-legend{
+    li i{
+      background-color:#fff;
+      border:1px solid #d8d9df;
+      // background-color:#ff2e62;
+      border-top-left-radius:8px;
+      border-top-right-radius:8px;
+      border-bottom-left-radius:2px;
+      border-bottom-right-radius:2px;
+    }
+    .i-normal{}
+    .i-sold{
+      background-color:#f44235;      
+    }
+    .i-best-area{
+      border:1px dashed #d8d9df; 
+      border-radius:0px;
+    }
+  }
+}

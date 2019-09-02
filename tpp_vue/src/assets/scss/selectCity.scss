@@ -1,0 +1,32 @@
+
+#select_city{
+  // font-size:16px;
+  .van-index-anchor{
+    color:#777777;
+    background-color:#eeeeee;
+    line-height:3.6rem;
+  }
+  .van-cell{
+    padding:0rem 1.6rem 0rem 1.1rem;
+    // line-height: 4.6rem;
+  }
+  .van-cell__title{
+    color:#777777;
+    padding:11px 0;
+  }
+  .van-index-bar__index{
+    line-height: 3vh;
+    color:#1394f3;
+    padding:0 0.6rem 0 1.6rem;
+  }
+  .van-nav-bar__text{
+    font-size:2rem;
+    color:#777777;
+  }
+  .van-nav-bar{
+    border-bottom: 1px solid #e9e9e9;
+  }
+  // .van-index-bar{
+  //   transition:0.3s;
+  // }
+}

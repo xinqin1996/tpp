@@ -1,0 +1,311 @@
+// <!--1 头部 ： 影院详情 -->
+//     <div class="cinema_top">
+//       <div class="title">杭州百老汇</div>
+//       <div class="address">江干区富春路</div>
+//       <div class="icons">
+//         <div class="icon">观影小食imax</div>
+//       </div>
+//       <div class="prefe">
+//         <span>联合优惠专区</span> <br>
+//         <span>银行、运营商特惠</span>
+//       </div>
+//       <img src="http://127.0.0.1:5050/icon/dingwei.svg" alt="">
+//       <img src="http://127.0.0.1:5050/icon/collect.svg" alt="">
+//     </div>
+#cinema_show{ 
+  .cinema_top{
+    padding:4vw;
+    position: relative;
+    .title{
+      color:#222222;
+      font-size:1.6rem;
+      height:5vw;
+      margin-bottom:2.4vw;
+    }
+    .address{
+      color:#999999;
+      font-size:1.3rem;
+      height:5vw;
+      margin-bottom:1.8vw;      
+    }
+    .icons{
+      width:61%;
+      height:16px;
+      overflow: hidden;
+      .icon{
+        font-size:1.2rem;
+        color:#1394f3;
+        margin-bottom:7px;margin-right:1vw;
+        padding:0 3px;
+        height:15px;
+        line-height:13px;
+        border:1px solid rgba(19,148,243,.4);
+         float:left;
+      }
+    }
+    .prefe{
+      margin-top:4vw;
+      border:1px solid rgba(128,193,229,.7);
+      background-color: #f3f9fd;
+      color: #65b1db;
+      padding:2vw 12vw 2vw 4vw;
+      border-radius:3px;
+      span{}
+    }
+    .icon_abs{
+      position:absolute;
+      top:20%;right:5%;
+      img{
+        width:40px;
+        // height:20px;
+        padding-left:10px;
+        padding-right:10px;
+      }
+      .map{}
+      .collect{}      
+    }
+  }
+  .cinema_middle_img{
+    // height:33.3vw;
+    background-color:#eee;
+    position: relative;
+    overflow: hidden;
+    .img_blur{
+      filter:blur(5px);
+      position:absolute;
+      z-index:3;
+      top:0;left:0;
+      width:100%;
+      height:100%;
+      text-align:center;
+      overflow: hidden;
+      img{
+        width:100%;
+        // height:100%;
+      }
+    }
+    .ul_cover{
+      // display:none;
+      position: absolute;
+      width:100%;
+      height:100%;
+      z-index:5;
+      background-color:#4d6a8c;
+      opacity:0.6;
+    }
+    .img_ul{
+      width:400vw;
+      margin-left:39vw;
+      // height:35vw;
+      // overflow: hidden;
+      transition:0.3s;
+      .img_li{
+        position: relative;
+        float:left;
+        height:35vw;
+        width:22vw;
+        // background-color:#f0f;
+        .img_block{
+          transition:0.4s;
+          width:17.6vw;
+          height:24.3vw;
+          position:absolute;
+          bottom:0;left:10%;
+          z-index: 10;
+        }
+        img{
+          display:block;
+          width:100%;
+          height:100%;
+          // transition:0.4s;
+          // width:17.6vw;
+          // height:24.3vw;
+          // position:absolute;
+          // bottom:0;left:10%;
+          // z-index: 10;
+        }
+        a{
+          width:100%;
+          height:100%;
+          bottom:0;left:0;
+          position: absolute;
+          z-index:18;
+          opacity:0; 
+        }
+        .cover{
+          // transition:0.3s;
+          // width:17.6vw;
+          width:100%;
+          // height:24.3vw;
+          height:100%;
+          bottom:0;left:0;
+          position: absolute;
+          z-index:20;
+          background-color:#EEE;
+          opacity:0.3;
+        }
+        .cover.active{
+          display: none;
+        }
+        .img_block.activeImg{
+          width:20.9vw;
+          height:28.8vw;
+          position:absolute;
+          bottom:0;left:2.5%;
+        }
+      }
+    }
+
+  }
+  .cinema_middle_title{
+    text-align: center;
+    vertical-align: middle;
+    padding:1.06vw 0 2.66vw;
+    .title{
+      font-size:1.7rem;
+      line-height: 7.5vw;
+      font-weight: 700;
+      vertical-align: middle;
+    }
+    .show{
+      .ping,.want{
+        font-size:1.2rem;
+        line-height:1.5;
+        vertical-align: middle;
+      }
+      .ping,.people{
+        padding:0 4px;
+      }
+      .score,.people{
+        font-size:1.5rem;
+        // line-height:5.86vw;
+        line-height:1.5;
+        color: #ff9c1c;
+        vertical-align: middle;
+      }
+    }
+    .infor{
+      color:#999999;
+      line-height: 1.5;
+    }
+  }
+  .cinema_bottom{
+    .van-tabs--line .van-tabs__wrap{
+      width:50%
+    }
+    .noPlay{
+      padding:4vw;
+      height: 20vw;
+      text-align: center;
+      line-height: 12vw;
+      font-size:1.4rem;
+      color:#999999;
+    }
+    .time_item{
+      padding:4vw 0;
+      width:92vw;
+      margin:0 auto;
+      // background-color:#ccc;
+      display:flex;
+      border-bottom:1px solid #ededed;
+      .item1{
+        width:20vw;
+        div:first-child{
+          font-size:2rem;
+          line-height: 6.4vw;
+          padding-bottom:1.5vw;
+          font-weight:700;
+        }
+        div:last-child{
+          font-size:1.2rem;
+          line-height: 6.4vw;
+          padding-bottom:1vw;
+          color:#999;
+        }
+      }
+      .item2{
+        width:38.1vw;
+        div:first-child{
+          padding-top:1vw;
+          font-size:1.2rem;
+          line-height: 6.4vw;
+        }
+        div:last-child{
+          padding-top:0.5vw;
+          font-size:1.2rem;
+          line-height: 6.4vw;
+          color:#999;
+        }
+      }
+      .item3{
+        width:15.28vw;      
+        div:first-child{
+          padding-bottom:1.5vw;          
+          span:first-child{
+            font-size:2rem;
+            line-height: 6.4vw;
+            font-weight:700;     
+            color:#ff2e62;       
+          }
+          span:last-child{
+            font-size:1.2rem;
+            color:#ff2e62;
+          }
+        }
+        div:last-child{
+          font-size:1.2rem;
+          line-height: 6.4vw;
+          padding-bottom:1vw;
+          padding-right:1vw;
+          color:#999;
+          text-decoration: line-through;
+          text-align: right;
+        }
+      }
+      .item4{
+        flex:1; 
+        display:flex;  
+        justify-content: center;
+        align-items: center;
+        padding-left:3vw;
+        div{
+          border:1px solid #ff2e62;
+          padding:0 3.6vw;
+          line-height: 7vw;
+          border-radius:4vw;
+          color:#ff2e62;          
+        }
+      }
+    }
+  }
+  .cinema_floor{
+    background-color:#f5f5f5;
+    padding:6vw 0;
+    text-align: center;
+    img{}
+  }
+  .cinema_login{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 4vw;
+    height:14.4vw;
+    background-color:#fff;
+    z-index: 15;
+    div:first-child{
+      color:#50505a;
+      font-size:1.4rem;
+    }
+    div:last-child{
+      font-size:1.4rem;
+      line-height: 7.4vw;
+      background-color:#ff47a8;
+      color:#fff;
+      padding:0 3.2vw;
+      border-radius:5px;
+    } 
+  }
+}

@@ -1,0 +1,106 @@
+#my_home {
+  position: relative;
+  background-color: #efefef; }
+  #my_home .bg {
+    position: absolute;
+    width: 300vw;
+    height: 300vw;
+    border-radius: 50%;
+    background-color: #f0f;
+    top: -250vw;
+    left: -100vw; }
+  #my_home .header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 8vw 4vw 6vw; }
+    #my_home .header .header_img {
+      width: 20vw;
+      height: 20vw;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      overflow: hidden; }
+      #my_home .header .header_img img {
+        width: 100%; }
+    #my_home .header .header_name {
+      padding-left: 3vw;
+      font-size: 2.2rem;
+      color: #fff; }
+    #my_home .header .icon1, #my_home .header .icon2 {
+      position: absolute;
+      top: 15vw;
+      right: 18vw;
+      z-index: 10;
+      width: 6vw;
+      height: 6vw; }
+      #my_home .header .icon1 img, #my_home .header .icon2 img {
+        width: 100%;
+        height: 100%; }
+    #my_home .header .icon2 {
+      right: 6vw; }
+  #my_home .main {
+    position: relative;
+    padding: 0 4vw 75px; }
+    #my_home .main .main_content {
+      height: 100%; }
+      #my_home .main .main_content .br {
+        background-color: #fff;
+        border-radius: 3.5vw;
+        overflow: hidden; }
+      #my_home .main .main_content .block_title {
+        margin: 0 auto;
+        width: 90%;
+        font-size: 1.6rem;
+        font-weight: 600;
+        padding: 2.5vw 0;
+        border-bottom: 1px solid #bdc5c8; }
+      #my_home .main .main_content .block1 .van-grid-item__text {
+        color: #000; }
+      #my_home .main .main_content .block2 {
+        margin-top: 2.6vw; }
+        #my_home .main .main_content .block2 .van-grid-item__text {
+          color: #000; }
+        #my_home .main .main_content .block2 .van-grid {
+          padding-bottom: 5vw;
+          position: relative; }
+        #my_home .main .main_content .block2 .span_font {
+          position: absolute;
+          bottom: 4vw;
+          width: 33.3%;
+          left: 0;
+          text-align: center;
+          z-index: 5;
+          color: #9d9d9d; }
+        #my_home .main .main_content .block2 .span_font2 {
+          left: 33.3%; }
+      #my_home .main .main_content .block3 {
+        margin-top: 2.6vw; }
+        #my_home .main .main_content .block3 .content {
+          display: flex;
+          padding: 4vw; }
+          #my_home .main .main_content .block3 .content .ct {
+            flex: 1;
+            display: flex; }
+            #my_home .main .main_content .block3 .content .ct > div:first-child {
+              width: 30%;
+              background-color: #eeccee;
+              text-align: center; }
+            #my_home .main .main_content .block3 .content .ct img {
+              width: 50%;
+              padding: 5vw 0; }
+            #my_home .main .main_content .block3 .content .ct > div:last-child {
+              padding: 1vw 0 0 2vw; }
+              #my_home .main .main_content .block3 .content .ct > div:last-child div:first-child {
+                font-size: 14px;
+                font-weight: 600; }
+              #my_home .main .main_content .block3 .content .ct > div:last-child div:not(:first-child) {
+                color: #9d9d9d; }
+      #my_home .main .main_content .block4 {
+        margin-top: 2.6vw; }
+        #my_home .main .main_content .block4 .van-grid-item__content {
+          padding: 2.13vw; }
+        #my_home .main .main_content .block4 .van-grid {
+          padding-top: 2.13vw;
+          padding-bottom: 2.13vw; }
+        #my_home .main .main_content .block4 .van-grid-item__text {
+          color: #000; }

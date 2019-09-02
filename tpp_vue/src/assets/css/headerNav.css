@@ -1,0 +1,75 @@
+#headerNav {
+  background-color: #fff;
+  width: 100%; }
+  #headerNav .placeholder {
+    height: 6.3vh; }
+  #headerNav .header_nav > div {
+    position: relative; }
+  #headerNav .header_nav::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #f0f0f0;
+    right: 0px;
+    bottom: -1px;
+    z-index: 20; }
+  #headerNav .header_nav > div:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    height: 3.2vh;
+    width: 1px;
+    background-color: #f0f0f0;
+    right: -1px;
+    top: 1.55vh;
+    z-index: 20; }
+  #headerNav .header_nav {
+    z-index: 5;
+    display: flex;
+    height: 6.3vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff; }
+    #headerNav .header_nav .van-popup {
+      max-height: 60vh;
+      overflow: auto; }
+    #headerNav .header_nav .van-dropdown-menu__title {
+      width: 100%;
+      text-align: center;
+      font-size: 1.3rem;
+      color: #000; }
+    #headerNav .header_nav .van-dropdown-menu {
+      height: 100%; }
+    #headerNav .header_nav element.style {
+      color: #ff2e62; }
+    #headerNav .header_nav .van-dropdown-menu__title::after {
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      margin-top: -5px;
+      border: 3px solid;
+      border-color: transparent transparent currentColor currentColor;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      opacity: .8;
+      content: ''; }
+    #headerNav .header_nav .van-dropdown-menu__title--down::after {
+      margin-top: -1px;
+      -webkit-transform: rotate(135deg);
+      transform: rotate(135deg); }
+    #headerNav .header_nav .van-ellipsis {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 80%; }
+    #headerNav .header_nav .change_city {
+      width: 28%; }
+    #headerNav .header_nav .change_area {
+      width: 20%; }
+    #headerNav .header_nav .change_sort {
+      width: 20%; }
+    #headerNav .header_nav .change_char {
+      width: 20%; }
+    #headerNav .header_nav .search {
+      width: 12%; }
