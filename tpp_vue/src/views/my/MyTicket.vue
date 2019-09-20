@@ -30,6 +30,15 @@ export default {
       list:[],
     }
   },
+  // 使用路由钩子在页面里获取即将跳转过去的路径
+  beforeRouteLeave (to, from, next) {
+    console.log("打印即将过去的路径",to.path)
+    if(to.path=='/payment'){   // 拦截/payment
+      next(false)
+    }else{
+      next();
+    }
+  },
   computed:{
     url(){
       return this.$store.state.url;
@@ -40,7 +49,8 @@ export default {
   },
   methods:{
     goHome(){
-      this.$router.go(-1);
+      //返回首页
+      this.$router.push("/");
     },
     load(){
       var url="user/v1/get_ticket";
@@ -55,8 +65,12 @@ export default {
 </script>
 <style scoped>
   #myticket{
+
+  }
+  #myticket{
     background-color:#eee;
     height:100vh;
+    width:100vw;
     overflow-y:scroll;
   }
   .header{

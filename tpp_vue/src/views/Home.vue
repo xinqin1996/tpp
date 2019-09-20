@@ -2,48 +2,42 @@
 	<div>
 		<!-- {{active}} -->
 		<mt-tab-container v-model="active">
-			<mt-tab-container-item id="movie">
-				<div class="cityAndShow cf">
-					<my-city class="city"></my-city>
-					<!-- 这里再次进行分屏切换
-					<van-tabs class="show">
-  						<van-tab title="正在热映" @click.native="activeTwo_now">
-							  <movie-list :is_show="1"></movie-list>
-						</van-tab>
-  						<van-tab title="即将上映" @click="activeTwo_soon">
-								<movie-list :is_show="0"></movie-list>
-						</van-tab>
-					</van-tabs> -->
-					<div class="changeh">
-						<h2 @click="activeTwo_now" class="h2" id="now">正在热映</h2>
-						<h2 @click="activeTwo_soon" class="h2" id="soon">即将上映</h2>			
-					</div>					
-				</div>
-				<van-swipe :autoplay="3000">
-					<van-swipe-item v-for="(item,i) of list" :key="i" class="carouselImg">
-     					<img :src="`http://127.0.0.1:5050/${item.img_url}`" alt="">
-					</van-swipe-item>
-				</van-swipe> 
-				<mt-tab-container v-model="activeTwo">
-					<mt-tab-container-item id="now">      
-					<!-- 这里是正在热映的内容 -->
-						<movie-list :is_show="1"></movie-list>
-					</mt-tab-container-item>
-					<mt-tab-container-item id="soon">
-						<!-- 这里是即将上映的内容 -->
-						<movie-list :is_show="0"></movie-list>
-					</mt-tab-container-item>
-				</mt-tab-container>
-			</mt-tab-container-item>
-			<mt-tab-container-item id="cinema">
-				<my-city></my-city>
-				<div style="width:100vw;height:100vh">
-					<img style="width:25%;height:25%" src="http://127.0.0.1:5050/active_cinema.svg" alt="">
-				</div>
-			</mt-tab-container-item>
-			<mt-tab-container-item id="my">
-				<my-home></my-home>
-			</mt-tab-container-item>
+			<transition name="tab-item">
+				<mt-tab-container-item id="movie" key="movie">
+					<div class="cityAndShow cf">
+						<my-city class="city"></my-city>
+						<div class="changeh">
+							<h2 @click="activeTwo_now" class="h2" id="now">正在热映</h2>
+							<h2 @click="activeTwo_soon" class="h2" id="soon">即将上映</h2>	
+						</div>					
+					</div>
+					<van-swipe :autoplay="3000">
+						<van-swipe-item v-for="(item,i) of list" :key="i" class="carouselImg">
+	     					<img :src="`http://127.0.0.1:5050/${item.img_url}`" alt="">
+						</van-swipe-item>
+					</van-swipe> 
+					<mt-tab-container v-model="activeTwo">
+						<mt-tab-container-item id="now">      
+						<!-- 这里是正在热映的内容 -->
+							<movie-list :is_show="1"></movie-list>
+						</mt-tab-container-item>
+						<mt-tab-container-item id="soon">
+							<!-- 这里是即将上映的内容 -->
+							<movie-list :is_show="0"></movie-list>
+						</mt-tab-container-item>
+					</mt-tab-container>
+							
+				</mt-tab-container-item>
+			</transition>
+				<mt-tab-container-item id="cinema" key="cinema">
+					<my-city></my-city>
+					<div style="width:100vw;height:100vh">
+						<img style="width:25%;height:25%" src="http://127.0.0.1:5050/active_cinema.svg" alt="">
+					</div>
+				</mt-tab-container-item>
+				<mt-tab-container-item id="my"  key="my">
+					<my-home></my-home>
+				</mt-tab-container-item>
 		</mt-tab-container>
 		<mt-tabbar v-model="active" fixed>
 			<mt-tab-item id="movie" data-cid="movie" @click.native="changeState(0);changeActive()">
@@ -92,6 +86,7 @@ export default {
                 {isSelect:false},//2保存第一个按钮的状态
             ],
 			list:[],
+			time:0,
 			activeTwo:"soon",
 			carouselimg:"http:127.0.0.1:5050"
 			// showList:[],
@@ -104,6 +99,15 @@ export default {
 		doc.style.borderBottom='2px solid #ff2e62';
 	},
 	methods:{
+			//防止页面后退
+			// https://www.cnblogs.com/sunshq/p/7976827.html
+			fobidden_back() {
+					//防止页面后退
+					window.addEventListener('popstate',function(){
+						// history.pushState(null, null, document.URL);				
+						history.pushState(null,null,location.href)
+					})
+			},
 		    changeState(idx){
             // 功能：指定当前按钮状态修改true
             //          其他按钮状态修改false
@@ -166,6 +170,7 @@ export default {
 		// }
 	},
 	created(){
+		this.fobidden_back(),
 		//使用promise 导入外部的js代码，异步向服务器发起请求；
 		movieCarousel().then((res)=>{
 			this.list=res;
@@ -205,6 +210,21 @@ export default {
 }
 </script>	
 <style scoped>	
+    .tab-item-enter-active,
+    .tab-item-leave-active {
+        will-change: transform;
+        transition: all .3s;
+        position: absolute;
+        width:100%;
+        left:0;
+    }
+    .tab-item-enter {
+        transform: translateX(-100%);
+    }
+    .tab-item-leave-active {
+        transform: translateX(100%);
+    }
+
 	.city{
 		float:left;
 	}

@@ -1,11 +1,17 @@
 <template>
  <div class="app-container">
+   <!-- 因为页面布局的问题，暂时取消transition 过渡 -->
+   <!-- <transition name="slide-left"> -->
       <!-- <router-view></router-view> -->
       <!--  缓存保存：套一层keep-alive -->
-      <keep-alive>
-        <router-view v-if="$route.meta.keepAlive" class="child-view"></router-view>
+      <keep-alive key="con">
+        <router-view v-if="$route.meta.keepAlive" class="child-view" key="keep"></router-view>
       </keep-alive>
-      <router-view v-if="!$route.meta.keepAlive" class="child-view"></router-view>
+   <!-- </transition> -->
+   <!-- <transition name="slide-left"> -->
+      <router-view v-if="!$route.meta.keepAlive" class="child-view" key="not"></router-view>   
+   <!-- </transition> -->
+
  </div>
 </template>
 
@@ -37,6 +43,60 @@ export default {
 </script>
 
 <style>
+
+/* 注释，不需要写这些 */
+html{
+  /* height:100%; */
+  overflow: auto;
+}
+body{
+  min-height:100%;
+  position: relative;
+  overflow-x: hidden;
+} 
+
+/* 过渡中设置绝对定位 */
+.slide-right-enter-active,
+.slide-right-leave-active,
+.slide-left-enter-active,
+.slide-left-leave-active {
+  will-change: transform;
+  transition: all 1000ms;
+  position: absolute;     /* 运行过程中变为绝对定位，否则页面一定会乱 */
+}
+/* 进入前 */
+.slide-right-enter { 
+  opacity: 1;
+  transform: translate3d(-100%, 0, 0);
+}
+/* 出去后 */
+.slide-right-leave-to {
+  opacity: 1;
+  transform: translate3d(100%, 0, 0);
+}
+/*  */
+.slide-left-enter {
+  opacity: 1;
+  transform: translate3d(100%, 0, 0);
+}
+/*  */
+.slide-left-leave-to {
+  opacity: 1;
+  transform: translate3d(-100%, 0, 0);
+}
+
+/* 
+.component-fade-enter{
+  transform:translate(100vw,0)
+}
+.component-fade-leave-to{
+  transform:translate(-100vw,0)
+}
+.component-fade-enter-active, .component-fade-leave-active {
+  transition: all 1s ease;
+  position:absolute;
+} */
+
    .app-container{
       /* app.vue 自定义的属性 */
      /* padding-top:40px; */

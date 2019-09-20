@@ -26,7 +26,7 @@ app.use(cors({
     //允许跨域访问程序地址列表
     origin:["http://127.0.0.1:8080",
     "http://localhost:8080"],
-    credentials:true //请求验证允许接收客户端带来的身份信息
+    credentials:true //请求验证
  }))
 
 //配置session模块

@@ -22,6 +22,7 @@ import Seat from "./views/seat/Seat.vue"
 import Payment from "./views/payment/Payment.vue"
 import MyTicket from "./views/my/MyTicket.vue"
 import Transition from "./views/demo/Transition.vue"
+import Tran2 from "./views/demo/Tran2.vue"
 
 Vue.use(Router)
 
@@ -39,14 +40,16 @@ const router = new Router({    //1 使用ES6的规范，到出一个对象
     {path:'/payment',component:Payment,meta:{keepAlive:false}},
     {path:'/myticket',component:MyTicket,meta:{keepAlive:false}},
     {path:'/tran',component:Transition,meta:{keepAlive:false}},
+    {path:'/tran2',component:Tran2,meta:{keepAlive:false}},
     // {path:'/',component:Index},
     // {path:'/lady',component:Lady},
     // {path:'/shoppingCar',component:ShoppingCar},
     // {path:'/select',component:select},
-    // {path:'*',component:NotFound},
+    // {path:'*',component:NotFound}, 
   ],
   // 缓存保存
   mode: 'history',     //history // hash
+  // 在缓存状态下，页面返回将回到离开时的位置
   scrollBehavior (to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition

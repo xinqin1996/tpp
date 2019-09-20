@@ -1,27 +1,17 @@
 <template>
-<div>
-    <transition>
-      <button v-if="isEditing" key="save">
-        Save
-      </button>
-      <button v-else key="edit">
-        Edit
-      </button>
-    </transition> 
-
-    <transition>
-      <button v-bind:key="isEditing">
-        {{ isEditing ? 'Save' : 'Edit' }}
-      </button>
-    </transition>
-
-    <transition>
-      <button v-bind:key="docState">
-        {{ buttonMessage }}
-      </button>
-    </transition>
-
-</div>
+<div class="d2">
+  <div class="d4">
+      <transition name="fade">
+        <button v-if="show" class="d1"  @click="show=!show" key="on">on</button>
+        <button v-if="!show" class="d1"  @click="show=!show" key="off">off</button>
+      </transition>
+  </div>
+  <div>
+    <button @click="show=!show">点击切换</button>
+    <router-link to="/tran2">tran2</router-link>
+  </div>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sapiente est voluptatum eos possimus, ullam dignissimos, maiores minima consectetur repudiandae quaerat nulla labore ad vel nisi magni quae exercitationem sunt.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sapiente est voluptatum eos possimus, ullam dignissimos, maiores minima consectetur repudiandae quaerat nulla labore ad vel nisi magni quae exercitationem sunt.Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sapiente est voluptatum eos possimus, ullam dignissimos, maiores minima consectetur repudiandae quaerat nulla labore ad vel nisi magni quae exercitationem sunt.Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sapiente est voluptatum eos possimus, ullam dignissimos, maiores minima consectetur repudiandae quaerat nulla labore ad vel nisi magni quae exercitationem sunt.Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sapiente est voluptatum eos possimus, ullam dignissimos, maiores minima consectetur repudiandae quaerat nulla labore ad vel nisi magni quae exercitationem sunt.Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sapiente est voluptatum eos possimus, ullam dignissimos, maiores minima consectetur repudiandae quaerat nulla labore ad vel nisi magni quae exercitationem sunt.Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sapiente est voluptatum eos possimus, ullam dignissimos, maiores minima consectetur repudiandae quaerat nulla labore ad vel nisi magni quae exercitationem sunt.</div>
 
 </template>
 <script>
@@ -65,15 +55,39 @@ export default {
 }
 </script>
 <style scoped>
-#example-4{
-  height:400px;
+.d2{
+  
+  /* top:0;
+  height:100%; */
+  /* width:100%;
+  height:100%; */
+  background-color:#fff;
+  /* position:absolute; */
 }
-.bounce-enter-active {
-  animation: bounce-in .5s;
+/* .d4{
+height:100px;
+width:200px;
+margin:0 auto;
+position:relative;
 }
-.bounce-leave-active {
-  animation: bounce-in .5s reverse;
-}
+  .d1{
+    position:absolute;
+    top:0;
+    left:0;
+
+  } */
+  .fade-enter-active,.fade-leave-active{
+    transition: 1s;
+  }
+  .fade-enter{
+    transform:translate(30px,0);
+    opacity:0;
+  }
+  .fade-leave-to{
+    transform:translate(-30px,0);
+     opacity: 0;
+  }
+
 @keyframes bounce-in {
   0% {
     transform: scale(0);

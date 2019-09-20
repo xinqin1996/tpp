@@ -138,7 +138,6 @@ var store = new Vuex.Store({
     // this.$store.getters.getUid;  获取数据的语法；
   },
   //添加异步操作数据函数
-  // https://blog.csdn.net/zdj5495/article/details/84871050  
   actions:{
     //修改数据函数保存mutations clear
     //异步执行操作
